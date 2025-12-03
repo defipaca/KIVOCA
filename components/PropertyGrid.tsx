@@ -17,7 +17,7 @@ const properties = [
     beds: '4 Beds',
     size: '2,150 sq ft',
     location: 'Higashiyama-ku, Kyoto',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80',
+    imageUrl: 'https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2024-05/heritage-hotels-kyoto_1.jpg?itok=P4ps2lCr',
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const properties = [
     beds: '3 Beds',
     size: '1,950 sq ft',
     location: 'Chuo-ku, Tokyo',
-    imageUrl: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    imageUrl: 'https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2025/11/25134950/Fufu-Tokyo-Ginza-Premium-Suite_6.jpg',
   },
 ]
 

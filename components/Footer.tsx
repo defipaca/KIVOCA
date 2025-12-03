@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="text-center md:text-right">
             <a
               href="mailto:ey@kivoca.com"
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-sm text-gray-300 hover:text-white transition-colors duration-300 underline hover:no-underline font-medium"
             >
               ey@kivoca.com
             </a>
