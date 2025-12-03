@@ -6,14 +6,15 @@
 See `GITHUB_SETUP.md` for detailed instructions
 
 **Quick version:**
-1. Create repo at github.com
+1. Create repo at github.com/defipaca (name it `kivoca`)
 2. Run these commands:
 ```bash
 cd /Users/yh/Desktop/KIVOCA
-git remote add origin https://github.com/YOUR_USERNAME/kivoca.git
 git branch -M main
 git push -u origin main
 ```
+
+**Note:** Remote is already set to `https://github.com/defipaca/kivoca.git`
 
 ### ✅ Step 2: Deploy to Vercel
 See `VERCEL_DEPLOY.md` for detailed instructions
