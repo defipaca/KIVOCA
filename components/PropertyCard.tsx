@@ -19,7 +19,10 @@ export default function PropertyCard({
   location,
   imageUrl,
 }: PropertyCardProps) {
-  const formUrl = process.env.NEXT_PUBLIC_FORM_URL || 'https://tally.so/r/your-form-id'
+  const scrollToWaitlist = () => {
+    const waitlistSection = document.getElementById('waitlist')
+    waitlistSection?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div className="group relative bg-white overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
@@ -43,7 +46,7 @@ export default function PropertyCard({
 
       {/* Content */}
       <div className="p-6 md:p-8">
-        <h3 className="font-serif text-xl md:text-2xl font-bold mb-3 text-charcoal">
+        <h3 className="font-sans text-xl md:text-2xl font-bold mb-3 text-charcoal">
           {name}
         </h3>
         <p className="text-xl md:text-2xl font-semibold text-charcoal mb-4">
@@ -54,14 +57,12 @@ export default function PropertyCard({
           <p className="text-sm md:text-base">{size}</p>
           <p className="text-sm md:text-base font-medium">{location}</p>
         </div>
-        <a
-          href={formUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full bg-charcoal text-white py-3 px-6 text-sm font-semibold tracking-wide hover:bg-charcoal/90 transition-all duration-300 uppercase text-center"
+        <button
+          onClick={scrollToWaitlist}
+          className="w-full bg-charcoal text-white py-3 px-6 text-sm font-semibold tracking-wide hover:bg-charcoal/90 transition-all duration-300 uppercase"
         >
           Join Waitlist
-        </a>
+        </button>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section className="py-20 md:py-32 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8">
+        <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8">
           About KIVOCA
         </h2>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">

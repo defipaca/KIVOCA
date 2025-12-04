@@ -1,7 +1,10 @@
 'use client'
 
 export default function HeroSection() {
-  const formUrl = process.env.NEXT_PUBLIC_FORM_URL || 'https://tally.so/r/your-form-id'
+  const scrollToWaitlist = () => {
+    const waitlistSection = document.getElementById('waitlist')
+    waitlistSection?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -18,21 +21,19 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
           Luxury Fractional Ownership
           <span className="block mt-2">in Japan</span>
         </h1>
         <p className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto leading-relaxed">
           Access high-value Japanese properties through a modern, compliant fractional model.
         </p>
-        <a
-          href={formUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={scrollToWaitlist}
           className="inline-block bg-white text-charcoal px-10 py-4 text-lg font-semibold tracking-wide hover:bg-beige-100 transition-all duration-300 uppercase"
         >
           Join the Waitlist
-        </a>
+        </button>
       </div>
 
       {/* Scroll Indicator */}
