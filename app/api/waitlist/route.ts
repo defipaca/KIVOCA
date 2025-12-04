@@ -42,12 +42,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (!marketsInterested || marketsInterested.trim().length === 0) {
-      return NextResponse.json(
-        { error: 'Please tell us about your market interests' },
-        { status: 400 }
-      )
-    }
+    // marketsInterested is optional, no validation needed
 
     // Verify reCAPTCHA if token is provided
     if (recaptchaToken) {
@@ -128,7 +123,7 @@ export async function POST(request: NextRequest) {
           full_name: fullName,
           accredited_investor: accreditedInvestor,
           investment_amount: investmentAmount,
-          markets_interested: marketsInterested,
+          markets_interested: marketsInterested?.trim() || null,
           submitted_at: new Date().toISOString(),
         },
       ])

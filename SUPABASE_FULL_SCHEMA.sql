@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS waitlist_submissions (
   full_name TEXT NOT NULL,
   accredited_investor TEXT NOT NULL,
   investment_amount TEXT NOT NULL,
-  markets_interested TEXT NOT NULL,
+  markets_interested TEXT,
   submitted_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );

@@ -222,13 +222,12 @@ export default function WaitlistForm() {
             {/* Markets Interested */}
             <div>
               <label htmlFor="marketsInterested" className="block text-sm font-medium text-gray-300 mb-2">
-                Which markets are you interested in for a holiday home, and are you open to properties outside of Japan?
+                Which markets are you interested in for a holiday home, and are you open to properties outside of Japan? <span className="text-gray-400">(optional)</span>
               </label>
               <textarea
                 id="marketsInterested"
                 value={marketsInterested}
                 onChange={(e) => setMarketsInterested(e.target.value)}
-                required
                 disabled={loading}
                 rows={4}
                 className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-white/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed resize-none"
