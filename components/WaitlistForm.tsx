@@ -98,11 +98,6 @@ export default function WaitlistForm() {
       setAccreditedInvestor('')
       setInvestmentAmount('')
       setMarketsInterested('')
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitted(false)
-      }, 5000)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to submit. Please try again.')
     } finally {
@@ -121,10 +116,26 @@ export default function WaitlistForm() {
         </p>
         
         {submitted ? (
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded">
-            <p className="text-xl text-white font-semibold">
-              Thank you! We'll be in touch soon.
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-12 rounded-lg">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <svg
+                className="w-16 h-16 text-white"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <p className="text-2xl md:text-3xl text-white font-semibold">
+                Thank you for joining!
+              </p>
+              <p className="text-lg text-gray-300">
+                We'll be in touch soon.
+              </p>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6 text-left">
